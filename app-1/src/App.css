@@ -1,3 +1,7 @@
+input {
+  border: 3px solid lightskyblue 
+}
+
 .App {
   text-align: center;
 }
