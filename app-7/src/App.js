@@ -1,9 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 // import logo from './logo.svg';
 import "./App.css";
+import NewTask from "./NewTask";
+import List from "./List";
 
-function App() {
-  return <div className="App"></div>;
-}
+const App = () => {
+  const [list, setList] = useState([]);
+
+  const addHandler = (task) => {
+    setList([...list, task]);
+  };
+
+  return (
+    <div className="App">
+      <NewTask addTask={addHandler} />
+      <List tasks={list} />
+    </div>
+  );
+};
 
 export default App;
